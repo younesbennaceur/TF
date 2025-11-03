@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import ServiceDetailPage from './pages/ServiceDetailPage';
+import Footer from './components/Footer';
 
 
 
@@ -35,6 +36,8 @@ function App() {
 
        
       </Routes>
+
+      <Footer />
 
     
     </div>

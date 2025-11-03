@@ -1,6 +1,8 @@
 import Hero from '../components/Hero'
 import AboutUs from '../components/AboutUs'
 import ServicesSection from '../components/Services'
+import ProjectsSection from '../components/ProjectSection'
+import StatsSection from '../components/StatsSection'
 
 
 export default function Home() {
@@ -10,6 +12,8 @@ export default function Home() {
         <Hero/>
         <AboutUs/>
         <ServicesSection/>
+        <ProjectsSection/>
+        <StatsSection/>
         
 
       

@@ -168,7 +168,7 @@ export default function ServiceDetailPage() {
           <h1 className="text-3xl font-bold mb-4">Service non trouvé</h1>
           <button
             onClick={() => navigate('/')}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-semibold transition-colors"
+            className="bg-[#0565C4]  hover:bg-[#0459af]  text-white px-6 py-2 rounded-md font-semibold transition-colors"
           >
             Retour à l'accueil
           </button>
@@ -247,7 +247,7 @@ export default function ServiceDetailPage() {
                 {service.benefits?.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <svg
-                      className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"
+                      className="w-5 h-5 text-[#0565C4]flex-shrink-0 mt-0.5"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -265,7 +265,7 @@ export default function ServiceDetailPage() {
               {/* CTA Button */}
               <button
                 onClick={() => navigate('/contact')}
-                className="w-full mt-8 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold transition-colors"
+                className="w-full mt-8 bg-[#0565C4]  hover:bg-[#0459af]  text-white px-6 py-3 rounded-md font-semibold transition-colors"
               >
                 Demander un devis
               </button>
