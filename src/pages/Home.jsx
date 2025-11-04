@@ -3,6 +3,9 @@ import AboutUs from '../components/AboutUs'
 import ServicesSection from '../components/Services'
 import ProjectsSection from '../components/ProjectSection'
 import StatsSection from '../components/StatsSection'
+import TestimonialsSection from '../components/TestimonialsSection'
+import SuppliersSection from '../components/Fournisseurs'
+import CTAHeroSection from '../components/Cta'
 
 
 export default function Home() {
@@ -14,6 +17,10 @@ export default function Home() {
         <ServicesSection/>
         <ProjectsSection/>
         <StatsSection/>
+        <TestimonialsSection/>
+        <SuppliersSection/>
+        <CTAHeroSection/>
+
         
 
       

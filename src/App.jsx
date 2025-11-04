@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import Footer from './components/Footer';
+import Project from './pages/Project';
 
 
 
@@ -32,6 +33,8 @@ function App() {
         <Route path='/' element={<Home />} />
         
         <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
+        <Route path="/projets" element={<Project />} />
+
       
 
        

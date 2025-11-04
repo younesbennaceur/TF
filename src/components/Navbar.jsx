@@ -67,7 +67,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link to="/a-propos" className="hover:text-blue-900 transition-colors">
+          <Link to="/projets" className="hover:text-blue-900 transition-colors">
             Projets
           </Link>
           <Link to="/blogs" className="hover:text-blue-900 transition-colors">
