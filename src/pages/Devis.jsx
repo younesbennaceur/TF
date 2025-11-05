@@ -19,7 +19,10 @@ export default function QuoteRequestForm() {
     horaires: [],
     connaissance: []
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -36,17 +39,56 @@ export default function QuoteRequestForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setFormData({});
-    alert("prise de la rndv est confirmee")
-    
+    setLoading(true);
+    setErrorMessage('');
+    setSuccessMessage('');
 
+    try {
+      const response = await fetch('/api/send-quote-request', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSuccessMessage('✓ Votre demande a été envoyée avec succès ! Nous vous contacterons bientôt.');
+        setFormData({
+          nom: '',
+          prenom: '',
+          adresse: '',
+          ville: '',
+          codePostal: '',
+          telephone: '',
+          email: '',
+          projet: '',
+          typeToiture: '',
+          isolerToiture: '',
+          creditImpot: '',
+          periode: '',
+          description: '',
+          disponibilites: [],
+          horaires: [],
+          connaissance: []
+        });
+      } else {
+        setErrorMessage(`✗ Erreur: ${data.message}`);
+      }
+    } catch (error) {
+      setErrorMessage('✗ Erreur de connexion au serveur. Vérifiez que le backend est en cours d\'exécution.');
+      console.error('Erreur:', error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative h-72 overflow-hidden">
         <img 
@@ -59,16 +101,15 @@ export default function QuoteRequestForm() {
         <div className="relative h-full flex items-center justify-center lg:mt-12 px-4">
           <div className="text-center text-white max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-           Demander un devis
+              Demander un devis
             </h1>
-           
           </div>
         </div>
       </div>
 
       {/* Form Section */}
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg  p-8">
+        <div className="bg-white rounded-lg p-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
             Demande de RDV pour un devis gratuit
           </h2>
@@ -76,14 +117,27 @@ export default function QuoteRequestForm() {
             Ce formulaire a pour but de préparer efficacement notre RDV ensemble. Ces informations restent confidentielles au sein de l'entreprise Tf Couverture, et ne seront en aucun cas divulguées. Dès réception de votre demande, nous vous contacterons dans les plus brefs délais pour vous proposer un RDV.
           </p>
 
+          {/* Messages de succès/erreur */}
+          {successMessage && (
+            <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+              {successMessage}
+            </div>
+          )}
+          {errorMessage && (
+            <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+              {errorMessage}
+            </div>
+          )}
+
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Nom */}
             <div>
               <label className="block text-gray-700 font-medium mb-2">Nom</label>
               <input
+                required
                 type="text"
                 name="nom"
-                placeholder="First name"
+                placeholder="Votre nom"
                 value={formData.nom}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none"
@@ -94,9 +148,10 @@ export default function QuoteRequestForm() {
             <div>
               <label className="block text-gray-700 font-medium mb-2">Prénom</label>
               <input
+                required
                 type="text"
                 name="prenom"
-                placeholder="Your email"
+                placeholder="Votre prénom"
                 value={formData.prenom}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none"
@@ -105,8 +160,9 @@ export default function QuoteRequestForm() {
 
             {/* Address */}
             <div>
-              <label className="block text-gray-700 font-medium mb-2">Address</label>
+              <label className="block text-gray-700 font-medium mb-2">Adresse</label>
               <input
+                required
                 type="text"
                 name="adresse"
                 placeholder="Adresse"
@@ -115,6 +171,7 @@ export default function QuoteRequestForm() {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none mb-3"
               />
               <input
+                required
                 type="text"
                 name="ville"
                 placeholder="Ville"
@@ -123,6 +180,7 @@ export default function QuoteRequestForm() {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none mb-3"
               />
               <input
+                required
                 type="text"
                 name="codePostal"
                 placeholder="Code Postal"
@@ -132,10 +190,11 @@ export default function QuoteRequestForm() {
               />
             </div>
 
-            {/* Numéro de téléphone */}
+            {/* Téléphone */}
             <div>
               <label className="block text-gray-700 font-medium mb-2">Numéro de téléphone</label>
               <input
+                required
                 type="tel"
                 name="telephone"
                 placeholder="Numéro de téléphone"
@@ -145,10 +204,11 @@ export default function QuoteRequestForm() {
               />
             </div>
 
-            {/* Adresse mail */}
+            {/* Email */}
             <div>
               <label className="block text-gray-700 font-medium mb-2">Adresse mail</label>
               <input
+                required
                 type="email"
                 name="email"
                 placeholder="Adresse mail"
@@ -162,12 +222,13 @@ export default function QuoteRequestForm() {
             <div>
               <label className="block text-gray-700 font-medium mb-2">Projet</label>
               <select
+                required
                 name="projet"
                 value={formData.projet}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none"
               >
-                <option value="">choisissez votre projet</option>
+                <option value="">Choisissez votre projet</option>
                 <option value="renovation">Rénovation de toiture</option>
                 <option value="isolation">Isolation</option>
                 <option value="charpente">Charpente</option>
@@ -180,12 +241,13 @@ export default function QuoteRequestForm() {
             <div>
               <label className="block text-gray-700 font-medium mb-2">Type de toiture</label>
               <select
+                required
                 name="typeToiture"
                 value={formData.typeToiture}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none"
               >
-                <option value="">choisissez votre Type de toiture</option>
+                <option value="">Choisissez votre type de toiture</option>
                 <option value="tuile">Tuile</option>
                 <option value="ardoise">Ardoise</option>
                 <option value="zinc">Zinc</option>
@@ -194,7 +256,7 @@ export default function QuoteRequestForm() {
               </select>
             </div>
 
-            {/* Souhaitez-vous isoler ou ré-isoler votre toiture? */}
+            {/* Isolation */}
             <div>
               <label className="block text-gray-700 font-medium mb-3">
                 Souhaitez-vous isoler ou ré-isoler votre toiture?
@@ -202,6 +264,7 @@ export default function QuoteRequestForm() {
               <div className="space-y-2">
                 <label className="flex items-center cursor-pointer">
                   <input
+                    required
                     type="radio"
                     name="isolerToiture"
                     value="oui"
@@ -213,6 +276,7 @@ export default function QuoteRequestForm() {
                 </label>
                 <label className="flex items-center cursor-pointer">
                   <input
+                    required
                     type="radio"
                     name="isolerToiture"
                     value="non"
@@ -225,7 +289,7 @@ export default function QuoteRequestForm() {
               </div>
             </div>
 
-            {/* Souhaitez-vous bénéficier du crédit d'impôt? */}
+            {/* Crédit d'impôt */}
             <div>
               <label className="block text-gray-700 font-medium mb-3">
                 Souhaitez-vous bénéficier du crédit d'impôt?
@@ -233,6 +297,7 @@ export default function QuoteRequestForm() {
               <div className="space-y-2">
                 <label className="flex items-center cursor-pointer">
                   <input
+                    required
                     type="radio"
                     name="creditImpot"
                     value="oui"
@@ -244,6 +309,7 @@ export default function QuoteRequestForm() {
                 </label>
                 <label className="flex items-center cursor-pointer">
                   <input
+                    required
                     type="radio"
                     name="creditImpot"
                     value="non"
@@ -256,29 +322,31 @@ export default function QuoteRequestForm() {
               </div>
             </div>
 
-            {/* A quelle période souhaitez-vous que les travaux commencent? */}
+            {/* Période */}
             <div>
               <label className="block text-gray-700 font-medium mb-2">
                 A quelle période souhaitez-vous que les travaux commencent?
               </label>
               <input
+                required
                 type="text"
                 name="periode"
-                placeholder="souhaitez-vous quelle période"
+                placeholder="Ex: Janvier 2024"
                 value={formData.periode}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none"
               />
             </div>
 
-            {/* Décrivez en quelques mots votre demande/ projet */}
+            {/* Description */}
             <div>
               <label className="block text-gray-700 font-medium mb-2">
-                Décrivez en quelques mots votre demande/ projet
+                Décrivez en quelques mots votre demande/projet
               </label>
               <textarea
+                required
                 name="description"
-                placeholder="Votre Projet"
+                placeholder="Votre projet"
                 value={formData.description}
                 onChange={handleInputChange}
                 rows="6"
@@ -286,7 +354,7 @@ export default function QuoteRequestForm() {
               ></textarea>
             </div>
 
-            {/* Créneaux de disponibilités pour notre RDV */}
+            {/* Disponibilités */}
             <div>
               <label className="block text-gray-700 font-medium mb-3">
                 Créneaux de disponibilités pour notre RDV
@@ -309,7 +377,7 @@ export default function QuoteRequestForm() {
               </div>
             </div>
 
-            {/* Créneaux horaire pour le jour du RDV */}
+            {/* Horaires */}
             <div>
               <label className="block text-gray-700 font-medium mb-3">
                 Créneaux horaire pour le jour du RDV
@@ -330,10 +398,10 @@ export default function QuoteRequestForm() {
               </div>
             </div>
 
-            {/* Comment avez-vous connu la société AMC IDF ? */}
+            {/* Comment avez-vous connu */}
             <div>
               <label className="block text-gray-700 font-medium mb-3">
-                Comment avez-vous connu la société Tf Couverture ?
+                Comment avez-vous connu la société Tf Couverture?
               </label>
               <div className="space-y-2">
                 {[
@@ -357,15 +425,18 @@ export default function QuoteRequestForm() {
               </div>
             </div>
 
-            {/* Submit Button */}
+            {/* Bouton Submit */}
             <button
-              onClick={handleSubmit}
-              className="w-full bg-[#0565C4] hover:bg-[#045fba] text-white font-semibold py-4 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2"
+              type="submit"
+              disabled={loading}
+              className={`w-full ${loading ? 'bg-gray-400' : 'bg-[#0565C4] hover:bg-[#045fba]'} text-white font-semibold py-4 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2`}
             >
-              Envoyer la demande
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
+              {loading ? 'Envoi en cours...' : 'Envoyer la demande'}
+              {!loading && (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              )}
             </button>
           </form>
         </div>
