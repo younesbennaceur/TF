@@ -36,9 +36,9 @@ export default function StatsSection() {
 
         {/* Right - Stats */}
        
-          <div className="flex flex-col  md:flex-row bg-[#0565C4] p-8 lg:p-12  justify-center ">
+          <div className="flex flex-col items-center gap-6 md:flex-row bg-[#0565C4] p-8 lg:p-12  justify-center ">
             {stats.map((stat, index) => (
-              <div key={index} className="w-1/3 flex flex-col gap-3">
+              <div key={index} className="md:w-1/3 flex flex-col  gap-3">
                 {/* Icon */}
                 <div className="flex items-center justify-start">
                   <div className="bg-white/20 p-3 rounded-lg">
