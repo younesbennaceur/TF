@@ -111,11 +111,11 @@ export default function Navbar() {
               Accueil
             </Link>
             <Link
-              to="/nos-services"
+              to="/entreprise"
               className="block py-2 text-gray-700 hover:text-blue-900 font-medium"
               onClick={() => setIsOpen(false)}
             >
-              Nos services
+              L’entreprise
             </Link>
 
             {/* Mobile Dropdown */}
@@ -124,7 +124,7 @@ export default function Navbar() {
                 onClick={() => setOpenDropdown(!openDropdown)}
                 className="w-full flex items-center justify-between py-2 text-gray-700 hover:text-blue-900 font-medium"
               >
-                Votre profil
+                Savoir-faire
                 <ChevronDown
                   size={18}
                   className={`transition-transform ${
@@ -152,22 +152,22 @@ export default function Navbar() {
             </div>
 
             <Link
-              to="/a-propos"
+              to="/projets"
               className="block py-2 text-gray-700 hover:text-blue-900 font-medium"
               onClick={() => setIsOpen(false)}
             >
-              À propos
+               Projets
             </Link>
             <Link
-              to="/blogs"
+              to="/contact"
               className="block py-2 text-gray-700 hover:text-blue-900 font-medium"
               onClick={() => setIsOpen(false)}
             >
-              Blogs
+              Contact
             </Link>
 
             <Link
-              to="/contact"
+              to="/devis"
               onClick={() => setIsOpen(false)}
               className="w-full block text-center bg-[#0565C4] hover:bg-[#045fba] text-white py-2 rounded-md font-medium mt-4 transition-colors"
             >

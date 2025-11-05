@@ -73,7 +73,7 @@ export default function QuoteRequestForm() {
             Demande de RDV pour un devis gratuit
           </h2>
           <p className="text-gray-600 text-center mb-8">
-            Ce formulaire a pour but de préparer efficacement notre RDV ensemble. Ces informations restent confidentielles au sein de l'entreprise AMC IDF, et ne seront en aucun cas divulguées. Dès réception de votre demande, nous vous contacterons dans les plus brefs délais pour vous proposer un RDV.
+            Ce formulaire a pour but de préparer efficacement notre RDV ensemble. Ces informations restent confidentielles au sein de l'entreprise Tf Couverture, et ne seront en aucun cas divulguées. Dès réception de votre demande, nous vous contacterons dans les plus brefs délais pour vous proposer un RDV.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -333,7 +333,7 @@ export default function QuoteRequestForm() {
             {/* Comment avez-vous connu la société AMC IDF ? */}
             <div>
               <label className="block text-gray-700 font-medium mb-3">
-                Comment avez-vous connu la société AMC IDF ?
+                Comment avez-vous connu la société Tf Couverture ?
               </label>
               <div className="space-y-2">
                 {[

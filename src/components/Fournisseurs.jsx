@@ -6,32 +6,32 @@ const suppliersData = [
   {
     id: 1,
     name: 'UNILIN',
-    logo: '/api/placeholder/200/80'
+    logo: '/f1.png'
   },
   {
     id: 2,
     name: 'ISONAT',
-    logo: '/api/placeholder/200/80'
+    logo: '/f2.png'
   },
   {
     id: 3,
     name: 'ISOVER',
-    logo: '/api/placeholder/200/80'
+    logo: '/f3.png'
   },
   {
     id: 4,
     name: 'PLACO',
-    logo: '/api/placeholder/200/80'
+    logo: '/f4.png'
   },
   {
     id: 5,
     name: 'VELUX',
-    logo: '/api/placeholder/200/80'
+    logo: '/f1.png'
   },
   {
     id: 6,
     name: 'ROCKWOOL',
-    logo: '/api/placeholder/200/80'
+    logo: '/f2.png'
   }
 ];
 
@@ -88,7 +88,7 @@ export default function SuppliersSection() {
           {visibleSuppliers.map((supplier) => (
             <div
               key={supplier.id}
-              className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-md transition-shadow duration-300"
+              className="flex items-center justify-center p-6  rounded-lg  duration-300"
             >
               <img
                 src={supplier.logo}

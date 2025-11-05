@@ -32,7 +32,7 @@ export default function ContactMapSection() {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localisation AMC IDF"
+              title="Localisation Tf-couverture "
             ></iframe>
           </div>
 
@@ -81,10 +81,10 @@ export default function ContactMapSection() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                   <a 
-                    href="mailto:info@amcidf.com" 
+                    href="mailto:info@Tf-couverture.com" 
                     className="text-gray-600 hover:text-[#0565C4] transition-colors"
                   >
-                    info@amcidf.com
+                    info@Tf-couverture.com
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Réponse sous 2h</p>
                 </div>

@@ -91,7 +91,7 @@ export default function AboutCompanySection() {
             L'entreprise
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            AMC IDF est une entreprise de couvreurs passionnés par leur métier, plusieurs ayant été formés chez les Compagnons du Devoir. L'entreprise est spécialisée dans la rénovation et l'isolation thermique des toitures. Nous intervenons à la fois en rénovation de toiture, ou sur des toitures neuves, des extensions ou surélévations, sur tout type de couverture : ardoises, zinc, tuiles plates, tuiles mécaniques, bac acier, shingle.
+            Tf Couverture est une entreprise de couvreurs passionnés par leur métier, plusieurs ayant été formés chez les Compagnons du Devoir. L'entreprise est spécialisée dans la rénovation et l'isolation thermique des toitures. Nous intervenons à la fois en rénovation de toiture, ou sur des toitures neuves, des extensions ou surélévations, sur tout type de couverture : ardoises, zinc, tuiles plates, tuiles mécaniques, bac acier, shingle.
           </p>
         </div>
 
@@ -184,7 +184,7 @@ export default function AboutCompanySection() {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localisation AMC IDF"
+              title="Localisation Tf-couverture"
             ></iframe>
           </div>
 
@@ -233,10 +233,10 @@ export default function AboutCompanySection() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                   <a 
-                    href="mailto:info@amcidf.com" 
+                    href="mailto:info@Tf-couverture.com" 
                     className="text-gray-600 hover:text-[#0565C4] transition-colors"
                   >
-                    info@amcidf.com
+                    info@Tf-couverture.com
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Réponse sous 2h</p>
                 </div>

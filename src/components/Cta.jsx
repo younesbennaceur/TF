@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function CTAHeroSection() {
   return (
     <section className="relative w-full py-24 lg:py-32 overflow-hidden">
@@ -29,9 +30,12 @@ export default function CTAHeroSection() {
         </p>
 
         {/* CTA Button */}
+        <Link  to="/devis" >
         <button className="bg-[#0565C4] hover:bg-[#045fba] text-white font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
            Demander un devis
         </button>
+        </Link>
+        
       </div>
 
       {/* Decorative Pattern Overlay (Optional) */}

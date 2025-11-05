@@ -23,18 +23,18 @@ export default function HeroSection() {
       <div className="relative z-10 w-full h-full flex items-center pl-8 lg:pl-16 max-w-7xl">
         <div className="max-w-5xl">
           {/* Main Heading */}
-          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Couvreur-zingueur, la passion dans notre métier
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          Votre toiture, notre savoir-faire d’exception.
           </h1>
 
           {/* Description */}
-          <p className="text-lg lg:text-xl text-white mb-8 leading-relaxed max-w-4xl">
-            Parce que chacun peut contribuer à un avenir plus propre, nous vous accompagnons avec des solutions pensées pour votre quotidien.
+          <p className="text-lg lg:text-xl text-white mb-8 leading-relaxed w-3/4  md:max-w-4xl">
+            Experts en couverture et zinguerie, nous mettons notre savoir-faire artisanal au service de toitures durables, esthétiques et parfaitement exécutées.
           </p>
 
           {/* CTA Button */}
           <Link
-            to="/contact"
+            to="/devis"
             className="inline-block bg-[#0565C4] hover:bg-[#045fba] text-white px-8 py-3 rounded-md font-semibold text-lg transition-colors duration-300"
           >
             Demander un devis

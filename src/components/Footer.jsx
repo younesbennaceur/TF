@@ -24,7 +24,7 @@ export default function Footer() {
                 <a href="tel:0143518724">01 43 51 87 24</a>
               </p>
               <p className="hover:text-white transition-colors">
-                <a href="mailto:info@amc-idf.com">info@amc-idf.com</a>
+                <a href="mailto:info@TF-Couverture.com">info@TF-Couverture.com</a>
               </p>
               <div className="space-y-1 text-sm">
                 <p>1-3 rue Maryse Bastié 93600</p>
