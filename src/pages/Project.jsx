@@ -92,11 +92,11 @@ export default function Project() {
          {/* Hero Section */}
       <div className="relative h-72 overflow-hidden">
         <img 
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&h=600&fit=crop"
+          src="/back.png"
           alt="Qui Sommes-Nous"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#0565C4]/95"></div>
+        <div className="absolute inset-0 bg-[#0565C4]/80"></div>
         
         <div className="relative h-full flex items-center justify-center lg:mt-12 px-4">
           <div className="text-center text-white max-w-4xl">

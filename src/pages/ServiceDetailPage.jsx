@@ -273,6 +273,7 @@ export default function ServiceDetailPage() {
           </div>
         </div>
       </div>
+      
     </section>
   );
 }

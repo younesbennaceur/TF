@@ -44,7 +44,7 @@ export default function Navbar() {
           <Link to="/" className="hover:text-blue-900 transition-colors">
             Accueil
           </Link>
-          <Link to="/nos-services" className="hover:text-blue-900 transition-colors">
+          <Link to="/entreprise" className="hover:text-blue-900 transition-colors">
             L’entreprise
           </Link>
 
@@ -70,7 +70,7 @@ export default function Navbar() {
           <Link to="/projets" className="hover:text-blue-900 transition-colors">
             Projets
           </Link>
-          <Link to="/blogs" className="hover:text-blue-900 transition-colors">
+          <Link to="/contact" className="hover:text-blue-900 transition-colors">
             Contact
           </Link>
         </div>
@@ -80,7 +80,7 @@ export default function Navbar() {
           <Phone size={16} className="inline-block mr-2" />
           <span>06.52.69.32.93</span> 
         </a>
-        <Link to="/contact" className="hidden lg:block bg-[#0565C4] hover:bg-[#045fba] text-white px-6 py-2 rounded-md font-medium transition-colors">
+        <Link to="/devis" className="hidden lg:block bg-[#0565C4] hover:bg-[#045fba] text-white px-6 py-2 rounded-md font-medium transition-colors">
           Demander un devis
         </Link>
 

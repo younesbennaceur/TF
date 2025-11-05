@@ -5,6 +5,9 @@ import Navbar from './components/Navbar';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import Footer from './components/Footer';
 import Project from './pages/Project';
+import ContactMapSection from './pages/Conatct';
+import AboutCompanySection from './pages/Entreprise';
+import QuoteRequestForm from './pages/Devis';
 
 
 
@@ -34,6 +37,9 @@ function App() {
         
         <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
         <Route path="/projets" element={<Project />} />
+        <Route path="/contact" element={<ContactMapSection />} />
+        <Route path="/entreprise" element={<AboutCompanySection />} />
+        <Route path="/devis" element={<QuoteRequestForm />} />
 
       
 

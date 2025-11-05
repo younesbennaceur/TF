@@ -1,4 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Services Data
 const servicesData = [
@@ -54,18 +56,12 @@ const servicesData = [
 
 // Services Grid Component
 export default function ServicesSection() {
-  const navigate = useNavigate();
-
-  const handleCardClick = (serviceId) => {
-    navigate(`/services/${serviceId}`);
-  };
-
   return (
     <section className="w-full py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-[#0565C4]  font-semibold mb-2">Découvrez notre savoir-faire</p>
+          <p className="text-[#0565C4] font-semibold mb-2">Découvrez notre savoir-faire</p>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Notre savoir-faire
           </h2>
@@ -75,12 +71,12 @@ export default function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {servicesData.map((service) => (
-            <div
+            <Link
               key={service.id}
-              onClick={() => handleCardClick(service.id)}
-              className="cursor-pointer group"
+              to={`/services/${service.id}`}
+              className="cursor-pointer group block"
             >
               {/* Card Image */}
               <div className="relative overflow-hidden rounded-lg mb-4 h-64">
@@ -90,21 +86,14 @@ export default function ServicesSection() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <button className="bg-[#0565C4] hover:bg-[#045fba]  text-white px-6 py-2 rounded-md font-semibold transition-colors">
+                  <span className="bg-[#0565C4] hover:bg-[#045fba] text-white px-6 py-2 rounded-md font-semibold transition-colors">
                     Découvrir
-                  </button>
+                  </span>
                 </div>
               </div>
 
               {/* Card Link */}
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleCardClick(service.id);
-                }}
-                className="text-[#0565C4] hover:text-[#045fba] font-semibold text-sm mb-3 flex items-center gap-2 group"
-              >
+              <div className="text-[#0565C4] hover:text-[#045fba] font-semibold text-sm mb-3 flex items-center gap-2 group">
                 En savoir plus »
                 <svg
                   className="w-4 h-4 group-hover:translate-x-1 transition-transform"
@@ -119,13 +108,13 @@ export default function ServicesSection() {
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </a>
+              </div>
 
               {/* Card Title */}
               <h3 className="text-gray-900 font-medium text-base underline">
                 {service.title}
               </h3>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

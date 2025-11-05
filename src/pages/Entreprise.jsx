@@ -1,0 +1,304 @@
+import { Award, FileText, Home } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+
+export default function AboutCompanySection() {
+  // Features data
+  const features = [
+    {
+      icon: Award,
+      title: "Entreprise certifiée Qualibat RGE",
+      description: "Ce label permet de nous démarquer par notre rigueur, notre savoir-faire et qualité de travail."
+    },
+    {
+      icon: FileText,
+      title: "Etudes et devis gratuits",
+      description: "Notre politique d'entreprise est de conseiller au mieux avant de proposer d'éventuels travaux."
+    },
+    {
+      icon: Home,
+      title: "Spécialiste de l'isolation des toitures",
+      description: "Notre savoir-faire : l'isolation des toitures, notamment par procédé SARKING et panneaux de fibres de bois, pour le confort d'été."
+    }
+  ];
+
+  // Team members data
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Christian",
+      role: "Gérant",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop"
+    },
+    {
+      id: 2,
+      name: "Ion",
+      role: "Chef de chantier",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop"
+    },
+    {
+      id: 3,
+      name: "Gheorghe",
+      role: "ENT Specialiste",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=500&fit=crop"
+    },
+    {
+      id: 4,
+      name: "Raphaël",
+      role: "Apprenti Couvreur",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
+    },
+    {
+      id: 5,
+      name: "Alexandre",
+      role: "Couvreur",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop"
+    }
+  ];
+
+  // Work photos data
+  const workPhotos = [
+    { id: 1, image: "./g2.png" },
+    { id: 2, image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop" },
+    { id: 3, image: "./g1.png" },
+    { id: 4, image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop" },
+    { id: 5, image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop" },
+    { id: 6, image: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=400&h=300&fit=crop" }
+  ];
+
+  return (
+    <section className="w-full  bg-white">
+          <div className="relative h-72 overflow-hidden ">
+        <img 
+          src="/back.png"
+          alt="Qui Sommes-Nous"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#0565C4]/80"></div>
+        
+        <div className="relative h-full flex items-center justify-center lg:mt-12 px-4">
+          <div className="text-center text-white max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+           L’entrepise
+            </h1>
+           
+          </div>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto py-8 lg:py-16 px-4 lg:px-6">
+        {/* Company Introduction */}
+        <div className="max-w-7xl mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            L'entreprise
+          </h2>
+          <p className="text-gray-600 text-lg leading-relaxed">
+            AMC IDF est une entreprise de couvreurs passionnés par leur métier, plusieurs ayant été formés chez les Compagnons du Devoir. L'entreprise est spécialisée dans la rénovation et l'isolation thermique des toitures. Nous intervenons à la fois en rénovation de toiture, ou sur des toitures neuves, des extensions ou surélévations, sur tout type de couverture : ardoises, zinc, tuiles plates, tuiles mécaniques, bac acier, shingle.
+          </p>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <div key={index} className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-[#0565C4] rounded-full flex items-center justify-center">
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Work Photos Gallery */}
+        <div className="mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {workPhotos.map((photo) => (
+              <div
+                key={photo.id}
+                className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[4/3]"
+              >
+                <img
+                  src={photo.image}
+                  alt={`Travaux de toiture ${photo.id}`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Team Section */}
+        <div className="text-center mb-12">
+          <p className="text-[#0565C4] font-semibold mb-2">Découvrez notre équipe professionnelle</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            L'équipe
+          </h2>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            Nous sommes une équipe de couvreurs passionnés, allant du chef de chantier jusqu'à l'apprenti, qui se fera un plaisir de vous accompagner dans vos futurs projets.
+          </p>
+        </div>
+
+        {/* Team Members Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {teamMembers.map((member) => (
+            <div key={member.id} className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-2xl mb-4 aspect-[3/4]">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {member.role}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 py-16 lg:grid-cols-2 gap-12">
+          {/* Left Side - Map */}
+          <div className="w-full h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.8!2d2.4950!3d48.9533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e612a!2s1-3%20Rue%20Maryse%20Basti%C3%A9%2C%2093600%20Aulnay-sous-Bois!5e0!3m2!1sfr!2sfr!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localisation AMC IDF"
+            ></iframe>
+          </div>
+
+          {/* Right Side - Contact Info */}
+          <div className="flex flex-col justify-center">
+            {/* Contact Details */}
+            <div className="space-y-6 mb-8">
+              {/* Address */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#0565C4] rounded-full flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">Adresse</h3>
+                  <p className="text-gray-600">
+                    1-3 rue Maryse Bastié<br />
+                    93600 Aulnay sous bois.
+                  </p>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#0565C4] rounded-full flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">Téléphone</h3>
+                  <p className="text-gray-600">
+                    <a href="tel:0652093293" className="hover:text-[#0565C4] transition-colors">
+                      06 52 09 32 93
+                    </a>
+                    <br />
+                    <a href="tel:0148496932" className="hover:text-[#0565C4] transition-colors">
+                      01 48 49 69 32
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#0565C4] rounded-full flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
+                  <a 
+                    href="mailto:info@amcidf.com" 
+                    className="text-gray-600 hover:text-[#0565C4] transition-colors"
+                  >
+                    info@amcidf.com
+                  </a>
+                  <p className="text-sm text-gray-500 mt-1">Réponse sous 2h</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media */}
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-4">Retrouvez-nous sur les réseaux</h3>
+              <div className="flex gap-3">
+                {/* Twitter/X */}
+                <a
+                  href="#"
+                  className="w-12 h-12 bg-gray-100 hover:bg-[#0565C4] rounded-full flex items-center justify-center transition-colors group"
+                  aria-label="Twitter"
+                >
+                  <svg className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
+
+                {/* Facebook */}
+                <a
+                  href="#"
+                  className="w-12 h-12 bg-gray-100 hover:bg-[#0565C4] rounded-full flex items-center justify-center transition-colors group"
+                  aria-label="Facebook"
+                >
+                  <svg className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+
+                {/* Instagram */}
+                <a
+                  href="#"
+                  className="w-12 h-12 bg-gray-100 hover:bg-[#0565C4] rounded-full flex items-center justify-center transition-colors group"
+                  aria-label="Instagram"
+                >
+                  <svg className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+
+                {/* LinkedIn */}
+                <a
+                  href="#"
+                  className="w-12 h-12 bg-gray-100 hover:bg-[#0565C4] rounded-full flex items-center justify-center transition-colors group"
+                  aria-label="LinkedIn"
+                >
+                  <svg className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+           
+        
+      
+      
+    </section>
+  );
+}
