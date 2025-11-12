@@ -8,25 +8,25 @@ const testimonialsData = [
     text: "Très beau travail un très bon accompagnement dans la préparation de notre projet, avec des conseils avisés. Très belle réalisation. Nous ne regrettons pas notre choix",
     author: "Johny Assloy",
     avatar: "/api/placeholder/48/48",
-    rating: 3
+    rating: 4.5
   },
   {
     id: 2,
-    text: "Très beau travail un très bon accompagnement dans la préparation de notre projet, avec des conseils avisés. Très belle réalisation. Nous ne regrettons pas notre choix",
+    text: "Très bonne expérience. Un suivi sérieux, des échanges fluides et des conseils pertinents qui nous ont permis d’avancer sereinement dans notre projet. Le rendu final est de grande qualité. Nous referions ce choix sans hésiter.",
     author: "Sarah H",
     avatar: "/api/placeholder/48/48",
     rating: 4.5
   },
   {
     id: 3,
-    text: "Très beau travail un très bon accompagnement dans la préparation de notre projet, avec des conseils avisés. Très belle réalisation. Nous ne regrettons pas notre choix",
+    text: "Nous sommes très satisfaits de l’accompagnement tout au long de notre projet. Les conseils étaient pertinents, l’approche professionnelle et le résultat final dépasse nos attentes. Excellente expérience, nous sommes ravis d’avoir fait ce choix.",
     author: "Marc D",
     avatar: "/api/placeholder/48/48",
     rating: 5
   },
   {
     id: 4,
-    text: "Très beau travail un très bon accompagnement dans la préparation de notre projet, avec des conseils avisés. Très belle réalisation. Nous ne regrettons pas notre choix",
+    text: "Un accompagnement irréprochable du début à la fin. Écoute, professionnalisme et qualité étaient au rendez-vous. Le résultat est à la hauteur de nos attentes, voire au-delà. Nous recommandons sans hésitation.",
     author: "Emma L",
     avatar: "/api/placeholder/48/48",
     rating: 4

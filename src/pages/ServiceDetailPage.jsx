@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 const servicesData = {
   'toiture-tuile': {
     title: 'Toiture tuile',
-    image: '/back.png',
+    image: '/7.jpg',
     description: 'Découvrez nos services de toiture en tuile, alliant tradition et durabilité.',
     longDescription: 'Notre entreprise de couverture est spécialisée dans la rénovation de toitures et nous réalisons des travaux en neuf également. Nous effectuons tout type de travaux de couverture en tuiles, que ce soit en tuiles mécaniques (terre-cuite ou béton) ou en tuiles plates. Nous vous apporterons tous nos conseils pour vous proposer la meilleure solution adaptée à votre toiture, selon vos critères de choix esthétiques et en prenant en compte les critères de pentes minimales requises selon le type de tuile souhaité. Il est important de bien choisir le bon type de tuiles, adaptées à votre toiture.',
     benefits: [
@@ -23,7 +23,7 @@ const servicesData = {
   },
   'toiture-zinc': {
     title: 'Toiture zinc',
-    image: '/back.png',
+    image: '/1.jpg',
     description: 'Une couverture en zinc pour un style moderne et une protection optimale.',
     longDescription: 'Le zinc est un matériau moderne et écologique pour votre toiture. Il offre une protection optimale contre les intempéries et un style contemporain à votre bâtiment. Nos experts vous conseillent sur les meilleures solutions en zinc adaptées à votre projet.',
     benefits: [
@@ -34,15 +34,15 @@ const servicesData = {
       'Facile à entretenir'
     ],
     gallery: [
-      '/g1.png',
-      '/g2.png',
-      '/g3.png',
-      '/g4.png'
+      '/1.jpg',
+      '/5.jpg',
+      '/9.jpg',
+      '/10.jpg'
     ]
   },
   'toiture-ardoise': {
     title: 'Toiture ardoise',
-     image: '/back.png',
+     image: '/3.jpg',
     description: 'L\'ardoise pour une couverture élégante et résistante dans le temps.',
     longDescription: 'L\'ardoise naturelle est un matériau premium pour les toitures haut de gamme. Elle offre une beauté naturelle incomparable et une durabilité exceptionnelle. Nos experts en ardoise vous proposent les meilleures solutions pour votre projet.',
     benefits: [
@@ -53,15 +53,12 @@ const servicesData = {
       'Esthétique incomparable'
     ],
     gallery: [
-      '/g1.png',
-      '/g2.png',
-      '/g3.png',
-      '/g4.png'
+      '/3.jpg'
     ]
   },
   'toiture-bac-acier': {
     title: 'Toiture bac acier',
-    image: '/back.png',
+    image: '/p5.jpg',
     description: 'Une solution robuste et économique pour vos bâtiments.',
     longDescription: 'Le bac acier est une solution économique et performante pour les toitures de bâtiments commerciaux et industriels. Installation rapide et résistance exceptionnelle caractérisent ce type de couverture.',
     benefits: [
@@ -72,15 +69,13 @@ const servicesData = {
       'Idéal pour bâtiments industriels'
     ],
     gallery: [
-      '/g1.png',
-      '/g2.png',
-      '/g3.png',
-      '/g4.png'
+      '/p4.jpg',
+      '/p5.jpg'
     ]
   },
   'charpente': {
     title: 'Charpente',
-   image: '/back.png',
+   image: '/charpant.jpg',
     description: 'Une charpente solide est la base d\'une toiture durable et fiable.',
     longDescription: 'Une bonne charpente est essentielle pour la solidité et la durabilité de votre toiture. Nos experts vous proposent des solutions adaptées à votre projet, en respectant les normes de construction en vigueur.',
     benefits: [
@@ -91,15 +86,14 @@ const servicesData = {
       'Garantie de qualité'
     ],
     gallery: [
-      '/g1.png',
-      '/g2.png',
-      '/g3.png',
-      '/g4.png'
+      '/charpant.jpg',
+      '/charpant2.jpg',
+      
     ]
   },
   'isolation': {
     title: 'Isolation',
-     image: '/back.png',
+     image: '/Isolation.jpg',
     description: 'L\'isolation des toitures pour améliorer votre confort thermique.',
     longDescription: 'Une bonne isolation thermique permet de réduire vos factures énergétiques et d\'améliorer votre confort. Nous proposons des solutions d\'isolation performantes incluant la méthode SARKING et les panneaux de fibres de bois.',
     benefits: [
@@ -110,15 +104,12 @@ const servicesData = {
       'Solutions modernes'
     ],
     gallery: [
-     '/g1.png',
-      '/g2.png',
-      '/g3.png',
-      '/g4.png'
+     '/Isolation.jpg'
     ]
   },
   'fenetre-toit': {
     title: 'Fenêtre de toit',
-     image: '/back.png',
+     image: '/4.jpg',
     description: 'Laissez entrer la lumière naturelle avec nos fenêtres de toit.',
     longDescription: 'Les fenêtres de toit apportent lumière naturelle et esthétique à vos combles. Découvrez nos solutions de fenêtres de toit performantes et bien intégrées à votre toiture.',
     benefits: [
@@ -129,15 +120,13 @@ const servicesData = {
       'Installation professionnelle'
     ],
     gallery: [
-      '/g1.png',
-      '/g2.png',
-      '/g3.png',
-      '/g4.png'
+      '/4.jpg',
+      '/6.jpg'
     ]
   },
   'demoussage': {
     title: 'Démoussage',
-     image: '/back.png',
+     image: '/demoussage.jpg',
     description: 'Nettoyage et démoussage pour prolonger la vie de votre toiture.',
     longDescription: 'Le démoussage régulier de votre toiture prolonge sa durée de vie et préserve son esthétique. Nos experts en nettoyage proposent des solutions efficaces et respectueuses de votre couverture.',
     benefits: [
@@ -148,10 +137,8 @@ const servicesData = {
       'Tarifs avantageux'
     ],
     gallery: [
-      '/g1.png',
-      '/g2.png',
-      '/g3.png',
-      '/g4.png'
+    '/demoussage.jpg',
+
     ]
   }
 };
@@ -264,7 +251,7 @@ export default function ServiceDetailPage() {
 
               {/* CTA Button */}
               <button
-                onClick={() => navigate('/contact')}
+                onClick={() => navigate('/devis')}
                 className="w-full mt-8 bg-[#0565C4]  hover:bg-[#0459af]  text-white px-6 py-3 rounded-md font-semibold transition-colors"
               >
                 Demander un devis

@@ -1,6 +1,6 @@
-import { useState } from 'react';
+
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 
 // Services Data
 const servicesData = [
@@ -25,19 +25,19 @@ const servicesData = [
   {
     id: 'toiture-bac-acier',
     title: 'Toiture bac acier',
-    image: '/s4.png',
+    image: '/p5.jpg',
     description: 'Une solution robuste et économique pour vos bâtiments.'
   },
   {
     id: 'charpente',
     title: 'Charpente',
-    image: '/s5.png',
+    image: '/charpant.jpg',
     description: 'Une charpente solide est la base d\'une toiture durable et fiable.'
   },
   {
     id: 'isolation',
     title: 'Isolation',
-    image: '/s6.png',
+    image: '/Isolation.jpg',
     description: 'L\'isolation des toitures pour améliorer votre confort thermique.'
   },
   {
@@ -49,7 +49,7 @@ const servicesData = [
   {
     id: 'demoussage',
     title: 'Démoussage',
-    image: '/s8.png',
+    image: '/demoussage.jpg',
     description: 'Nettoyage et démoussage pour prolonger la vie de votre toiture.'
   }
 ];

@@ -1,5 +1,3 @@
-
-
 import dotenv from 'dotenv';
 import express from 'express';
 import nodemailer from 'nodemailer';
@@ -18,7 +16,7 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD, // Mot de passe d'application (pas le mot de passe normal)
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 
@@ -104,10 +102,7 @@ function generateEmailHTML(formData) {
           <div class="section-title">🔧 Détails du projet</div>
           <div class="info-row"><span class="info-label">Type de Projet :</span><span class="info-value">${getProjetLabel(formData.projet)}</span></div>
           <div class="info-row"><span class="info-label">Type de toiture :</span><span class="info-value">${getToitureLabel(formData.typeToiture)}</span></div>
-          <div class="info-row"><span class="info-label">Isolation :</span><span class="info-value">${formData.isolerToiture === "oui" ? "✓ Oui" : "✗ Non"}</span></div>
-          <div class="info-row"><span class="info-label">Crédit d'impôt :</span><span class="info-value">${formData.creditImpot === "oui" ? "✓ Oui" : "✗ Non"}</span></div>
-          <div class="info-row"><span class="info-label">Période souhaitée :</span><span class="info-value">${formData.periode}</span></div>
-        </div>
+          <div
 
         <div class="section">
           <div class="section-title">📝 Description du projet</div>
@@ -116,18 +111,9 @@ ${formData.description}
           </p>
         </div>
 
-        <div class="section">
-          <div class="section-title">📅 Disponibilités</div>
-          <p><strong>Jours :</strong></p>
-          ${formData.disponibilites?.map(j => `<span class="badge">${j.toUpperCase()}</span>`).join("")}
-          <p style="margin-top: 15px;"><strong>Horaires :</strong></p>
-          ${formData.horaires?.map(h => `<span class="badge">${h}</span>`).join("")}
-        </div>
+        
 
-        <div class="section">
-          <div class="section-title">🔍 Comment nous avez-vous connu ?</div>
-          ${formData.connaissance?.map(src => `<span class="badge">${getConnaissanceLabel(src)}</span>`).join("")}
-        </div>
+       
 
         <div class="important">
           <strong>ℹ️ Important :</strong> Vos données sont confidentielles et ne seront jamais partagées.
@@ -161,10 +147,10 @@ app.post('/api/send-quote-request', async (req, res) => {
 
     const htmlContent = generateEmailHTML(formData);
 
-    // Email à l'administrateur
+    // Email au destinataire (l'email du client)
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_DESTINATAIRE,
+      to: formData.email, // ✅ Email dynamique du client
       subject: `Nouvelle demande de devis - ${formData.nom} ${formData.prenom}`,
       html: htmlContent,
     });

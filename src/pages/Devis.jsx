@@ -11,13 +11,9 @@ export default function QuoteRequestForm() {
     email: '',
     projet: '',
     typeToiture: '',
-    isolerToiture: '',
-    creditImpot: '',
-    periode: '',
+  
     description: '',
-    disponibilites: [],
-    horaires: [],
-    connaissance: []
+   
   });
 
   const [loading, setLoading] = useState(false);
@@ -68,13 +64,9 @@ export default function QuoteRequestForm() {
           email: '',
           projet: '',
           typeToiture: '',
-          isolerToiture: '',
-          creditImpot: '',
-          periode: '',
+          
           description: '',
-          disponibilites: [],
-          horaires: [],
-          connaissance: []
+         
         });
       } else {
         setErrorMessage(`✗ Erreur: ${data.message}`);
@@ -92,7 +84,7 @@ export default function QuoteRequestForm() {
       {/* Hero Section */}
       <div className="relative h-72 overflow-hidden">
         <img 
-          src="/back.png"
+           src="/7.jpg"
           alt="Qui Sommes-Nous"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -256,87 +248,10 @@ export default function QuoteRequestForm() {
               </select>
             </div>
 
-            {/* Isolation */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-3">
-                Souhaitez-vous isoler ou ré-isoler votre toiture?
-              </label>
-              <div className="space-y-2">
-                <label className="flex items-center cursor-pointer">
-                  <input
-                    required
-                    type="radio"
-                    name="isolerToiture"
-                    value="oui"
-                    checked={formData.isolerToiture === 'oui'}
-                    onChange={handleInputChange}
-                    className="w-4 h-4 text-[#0565C4]"
-                  />
-                  <span className="ml-2 text-gray-700">Oui</span>
-                </label>
-                <label className="flex items-center cursor-pointer">
-                  <input
-                    required
-                    type="radio"
-                    name="isolerToiture"
-                    value="non"
-                    checked={formData.isolerToiture === 'non'}
-                    onChange={handleInputChange}
-                    className="w-4 h-4 text-[#0565C4]"
-                  />
-                  <span className="ml-2 text-gray-700">Non</span>
-                </label>
-              </div>
-            </div>
+ 
+          
 
-            {/* Crédit d'impôt */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-3">
-                Souhaitez-vous bénéficier du crédit d'impôt?
-              </label>
-              <div className="space-y-2">
-                <label className="flex items-center cursor-pointer">
-                  <input
-                    required
-                    type="radio"
-                    name="creditImpot"
-                    value="oui"
-                    checked={formData.creditImpot === 'oui'}
-                    onChange={handleInputChange}
-                    className="w-4 h-4 text-[#0565C4]"
-                  />
-                  <span className="ml-2 text-gray-700">Oui</span>
-                </label>
-                <label className="flex items-center cursor-pointer">
-                  <input
-                    required
-                    type="radio"
-                    name="creditImpot"
-                    value="non"
-                    checked={formData.creditImpot === 'non'}
-                    onChange={handleInputChange}
-                    className="w-4 h-4 text-[#0565C4]"
-                  />
-                  <span className="ml-2 text-gray-700">Non</span>
-                </label>
-              </div>
-            </div>
-
-            {/* Période */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">
-                A quelle période souhaitez-vous que les travaux commencent?
-              </label>
-              <input
-                required
-                type="text"
-                name="periode"
-                placeholder="Ex: Janvier 2024"
-                value={formData.periode}
-                onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none"
-              />
-            </div>
+          
 
             {/* Description */}
             <div>
@@ -354,76 +269,7 @@ export default function QuoteRequestForm() {
               ></textarea>
             </div>
 
-            {/* Disponibilités */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-3">
-                Créneaux de disponibilités pour notre RDV
-              </label>
-              <div className="space-y-2">
-                {['mardi', 'mercredi', 'jeudi'].map((jour) => (
-                  <label key={jour} className="flex items-center cursor-pointer">
-                    <input
-                      type="checkbox"
-                      value={jour}
-                      checked={formData.disponibilites.includes(jour)}
-                      onChange={(e) => handleCheckboxChange(e, 'disponibilites')}
-                      className="w-4 h-4 text-[#0565C4] rounded"
-                    />
-                    <span className="ml-2 text-gray-700 capitalize">
-                      {jour === 'jeudi' ? 'Jeudi (à partir de 10h00)' : jour.charAt(0).toUpperCase() + jour.slice(1)}
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            {/* Horaires */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-3">
-                Créneaux horaire pour le jour du RDV
-              </label>
-              <div className="space-y-2">
-                {['7h00-10h00', '10h00-13h00', '13h00-16h30'].map((horaire) => (
-                  <label key={horaire} className="flex items-center cursor-pointer">
-                    <input
-                      type="checkbox"
-                      value={horaire}
-                      checked={formData.horaires.includes(horaire)}
-                      onChange={(e) => handleCheckboxChange(e, 'horaires')}
-                      className="w-4 h-4 text-[#0565C4] rounded"
-                    />
-                    <span className="ml-2 text-gray-700">{horaire.replace('-', ' - ')}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            {/* Comment avez-vous connu */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-3">
-                Comment avez-vous connu la société Tf Couverture?
-              </label>
-              <div className="space-y-2">
-                {[
-                  { value: 'google', label: 'Moteur de recherche Google' },
-                  { value: 'pages-jaunes', label: 'Site Pages Jaunes' },
-                  { value: 'annuaire', label: 'Annuaire' },
-                  { value: 'bouche-a-oreille', label: 'Bouche-à-oreille' },
-                  { value: 'autre', label: 'Autre' }
-                ].map((option) => (
-                  <label key={option.value} className="flex items-center cursor-pointer">
-                    <input
-                      type="checkbox"
-                      value={option.value}
-                      checked={formData.connaissance.includes(option.value)}
-                      onChange={(e) => handleCheckboxChange(e, 'connaissance')}
-                      className="w-4 h-4 text-[#0565C4] rounded"
-                    />
-                    <span className="ml-2 text-gray-700">{option.label}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
+ 
 
             {/* Bouton Submit */}
             <button

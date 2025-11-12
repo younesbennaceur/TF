@@ -2,7 +2,7 @@ import Hero from '../components/Hero'
 import AboutUs from '../components/AboutUs'
 import ServicesSection from '../components/Services'
 import ProjectsSection from '../components/ProjectSection'
-import StatsSection from '../components/StatsSection'
+import MapSection from '../components/StatsSection'
 import TestimonialsSection from '../components/TestimonialsSection'
 import SuppliersSection from '../components/Fournisseurs'
 import CTAHeroSection from '../components/Cta'
@@ -16,7 +16,7 @@ export default function Home() {
         <AboutUs/>
         <ServicesSection/>
         <ProjectsSection/>
-        <StatsSection/>
+        <MapSection/>
         <TestimonialsSection/>
         <SuppliersSection/>
         <CTAHeroSection/>

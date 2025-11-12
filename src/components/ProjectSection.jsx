@@ -7,7 +7,7 @@ const projectsData = [
   {
     id: 1,
     title: 'Toiture zinc moderne',
-    image: '/p1.png',
+    image: '/1.jpg',
     description: 'Rénovation complète d\'une toiture en zinc avec isolation thermique performante.',
     fullDescription: 'Ce projet a consisté en la rénovation complète d\'une toiture en zinc combinée avec une isolation thermique de pointe. Les travaux ont été réalisés en respectant les délais et budget prévu.',
     location: 'Paris, Île-de-France',
@@ -20,7 +20,7 @@ const projectsData = [
   {
     id: 2,
     title: 'Installation toiture tuiles',
-     image: '/p2.jpg',
+     image: '/2.jpg',
     description: 'Installation de nouvelles tuiles mécaniques avec structure de charpente renforcée.',
     fullDescription: 'Installation de tuiles mécaniques haute gamme avec renforcement de la structure de charpente. Finitions impeccables et respect des normes de construction.',
     location: 'Lyon, Rhône-Alpes',
@@ -33,7 +33,7 @@ const projectsData = [
   {
     id: 3,
     title: 'Belle réflection de toiture en tuiles plates',
-     image: '/p3.jpg',
+     image: '/5.jpg',
     description: 'Belle réflection de toiture en tuiles plates à Lumigny-Nesles Ormeaux cet été. Isolation de la toiture par procédé sarking combinant fibres de bois et polyuréthane, tuiles...',
     fullDescription: 'Belle réflection de toiture en tuiles plates à Lumigny-Nesles Ormeaux. Isolation de la toiture par procédé sarking combinant fibres de bois et polyuréthane pour un confort optimal.',
     location: 'Lumigny-Nesles Ormeaux',
@@ -59,7 +59,7 @@ const projectsData = [
   {
     id: 5,
     title: 'Charpente et couverture',
-     image: '/p5.jpg',
+     image: '/charpant.jpg',
     description: 'Reconstruction complète de charpente et nouvelle couverture.',
     fullDescription: 'Reconstruction complète de la structure de charpente selon les normes actuelles et pose d\'une nouvelle couverture de qualité premium.',
     location: 'Bordeaux, Aquitaine',
@@ -72,7 +72,7 @@ const projectsData = [
   {
     id: 6,
     title: 'Démoussage et nettoyage',
-     image: '/p6.png',
+     image: '/demoussage.jpg',
     description: 'Démoussage et nettoyage professionnel de toiture avec traitement hydrofuge.',
     fullDescription: 'Démoussage professionnel suivi d\'un nettoyage complet et traitement hydrofuge pour préserver la toiture.',
     location: 'Toulouse, Midi-Pyrénées',

@@ -3,73 +3,41 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export default function AboutCompanySection() {
   // Features data
-  const features = [
+    const features = [
     {
       icon: Award,
       title: "Entreprise certifiée Qualibat RGE",
-      description: "Ce label permet de nous démarquer par notre rigueur, notre savoir-faire et qualité de travail."
+      description: "Cette certification atteste de notre sérieux, de notre savoir-faire et de la qualité de nos réalisations. Elle vous permet également de bénéficier des aides financières liées à la rénovation énergétique."
     },
     {
       icon: FileText,
       title: "Etudes et devis gratuits",
-      description: "Notre politique d'entreprise est de conseiller au mieux avant de proposer d'éventuels travaux."
+      description: "Avant toute proposition de travaux, nous prenons le temps d’étudier votre projet afin de vous conseiller au mieux et de vous orienter vers la solution la plus adaptée."
     },
     {
       icon: Home,
       title: "Spécialiste de l'isolation des toitures",
-      description: "Notre savoir-faire : l'isolation des toitures, notamment par procédé SARKING et panneaux de fibres de bois, pour le confort d'été."
+      description: "Notre expertise principale : l’isolation thermique des toitures. Nous utilisons notamment la technique du SARKING ainsi que des panneaux en fibres de bois, offrant confort thermique hiver comme été et d’excellentes performances énergétiques."
     }
   ];
 
-  // Team members data
-  const teamMembers = [
-    {
-      id: 1,
-      name: "Christian",
-      role: "Gérant",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop"
-    },
-    {
-      id: 2,
-      name: "Ion",
-      role: "Chef de chantier",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop"
-    },
-    {
-      id: 3,
-      name: "Gheorghe",
-      role: "ENT Specialiste",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=500&fit=crop"
-    },
-    {
-      id: 4,
-      name: "Raphaël",
-      role: "Apprenti Couvreur",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
-    },
-    {
-      id: 5,
-      name: "Alexandre",
-      role: "Couvreur",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop"
-    }
-  ];
+
 
   // Work photos data
   const workPhotos = [
-    { id: 1, image: "./g2.png" },
-    { id: 2, image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop" },
-    { id: 3, image: "./g1.png" },
-    { id: 4, image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop" },
-    { id: 5, image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop" },
-    { id: 6, image: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=400&h=300&fit=crop" }
+    { id: 1, image: "./1.jpg" },
+    { id: 2, image: "2.jpg" },
+    { id: 3, image: "3.jpg"},
+    { id: 4, image: "4.jpg" },
+    { id: 5, image: "5.jpg" },
+    { id: 6, image: "6.jpg" }
   ];
 
   return (
     <section className="w-full  bg-white">
           <div className="relative h-72 overflow-hidden ">
         <img 
-          src="/back.png"
+           src="/7.jpg"
           alt="Qui Sommes-Nous"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -91,8 +59,17 @@ export default function AboutCompanySection() {
             L'entreprise
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            Tf Couverture est une entreprise de couvreurs passionnés par leur métier, plusieurs ayant été formés chez les Compagnons du Devoir. L'entreprise est spécialisée dans la rénovation et l'isolation thermique des toitures. Nous intervenons à la fois en rénovation de toiture, ou sur des toitures neuves, des extensions ou surélévations, sur tout type de couverture : ardoises, zinc, tuiles plates, tuiles mécaniques, bac acier, shingle.
-          </p>
+L'entreprise
+TF Couverture est une entreprise de couvreurs passionnés par leur métier, plusieurs ayant été formés chez les Compagnons du Devoir. L'entreprise est spécialisée dans la rénovation et l'isolation thermique des toitures. Nous intervenons à la fois en rénovation de toiture, ou sur des toitures neuves, des extensions ou surélévations, sur tout type de couverture : ardoises, zinc, tuiles plates, tuiles mécaniques, bac acier, shingle.
+
+Entreprise certifiée Qualibat RGE
+Ce label permet de nous démarquer par notre rigueur, notre savoir-faire et qualité de travail.
+
+Etudes et devis gratuits
+Notre politique d'entreprise est de conseiller au mieux avant de proposer d'éventuels travaux.
+
+Spécialiste de l'isolation des toitures
+Notre savoir-faire : l'isolation des toitures, notamment par procédé SARKING et panneaux de fibres de bois, pour le confort d'été.          </p>
         </div>
 
         {/* Features Grid */}
@@ -138,40 +115,9 @@ export default function AboutCompanySection() {
           </div>
         </div>
 
-        {/* Team Section */}
-        <div className="text-center mb-12">
-          <p className="text-[#0565C4] font-semibold mb-2">Découvrez notre équipe professionnelle</p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            L'équipe
-          </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Nous sommes une équipe de couvreurs passionnés, allant du chef de chantier jusqu'à l'apprenti, qui se fera un plaisir de vous accompagner dans vos futurs projets.
-          </p>
-        </div>
+       
 
-        {/* Team Members Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {teamMembers.map((member) => (
-            <div key={member.id} className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-2xl mb-4 aspect-[3/4]">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              </div>
-              <div className="text-center">
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  {member.role}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+     
 
         <div className="grid grid-cols-1 py-16 lg:grid-cols-2 gap-12">
           {/* Left Side - Map */}

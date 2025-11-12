@@ -5,7 +5,7 @@ export default function ContactMapSection() {
     <section className="w-full  bg-white">
           <div className="relative h-72 overflow-hidden">
         <img 
-          src="/back.png"
+          src="/7.jpg"
           alt="Qui Sommes-Nous"
           className="absolute inset-0 w-full h-full object-cover"
         />
