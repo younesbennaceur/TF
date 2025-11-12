@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex flex-col items-start">
             <img
               src="/Logo.png"
-              alt="AMC IDF Logo"
+              alt="TF Couverture Logo"
               className="h-16 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-white text-sm">TF Couverture</p>
@@ -28,7 +28,7 @@ export default function Footer() {
               </p>
               <div className="space-y-1 text-sm">
                 <p>1-3 rue Maryse Bastié 93600</p>
-                <p>Aulnay sous bois.</p>
+                <p>Aulnay-sous-Bois</p>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-white/90 hover:text-white transition-colors"
               >
                 <Youtube size={20} />
-                <span>Youtube</span>
+                <span>YouTube</span>
               </a>
             </div>
           </div>
@@ -93,8 +93,9 @@ export default function Footer() {
         <div className="border-t border-white/20 my-8"></div>
 
         {/* Copyright */}
-        <div className="text-center text-white/80 text-sm">
+        <div className="text-center text-white/80 text-sm space-y-2">
           <p>© 2025 by MIAGENCY. All rights reserved.</p>
+          <p>Toutes les images présentes sur ce site sont libres de droit ou utilisées avec autorisation.</p>
         </div>
       </div>
     </footer>
