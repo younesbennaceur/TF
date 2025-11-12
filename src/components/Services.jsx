@@ -7,19 +7,19 @@ const servicesData = [
   {
     id: 'toiture-tuile',
     title: 'Toiture tuile',
-    image: '/s1.png',
+    image: '/7.jpg',
     description: 'Découvrez nos services de toiture en tuile, alliant tradition et durabilité.'
   },
   {
     id: 'toiture-zinc',
     title: 'Toiture zinc',
-    image: '/s2.png',
+    image: '/1.jpg',
     description: 'Une couverture en zinc pour un style moderne et une protection optimale.'
   },
   {
     id: 'toiture-ardoise',
     title: 'Toiture ardoise',
-    image: '/s3.png',
+    image: '/3.jpg',
     description: 'L\'ardoise pour une couverture élégante et résistante dans le temps.'
   },
   {
@@ -43,7 +43,7 @@ const servicesData = [
   {
     id: 'fenetre-toit',
     title: 'Fenêtre de toit',
-    image: '/s7.png',
+    image: '/4.jpg',
     description: 'Laissez entrer la lumière naturelle avec nos fenêtres de toit.'
   },
   {
