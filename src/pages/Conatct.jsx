@@ -62,13 +62,10 @@ export default function ContactMapSection() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Téléphone</h3>
                   <p className="text-gray-600">
-                    <a href="tel:0652093293" className="hover:text-[#0565C4] transition-colors">
-                      06 52 09 32 93
+                    <a href="tel:0772355934" className="hover:text-[#0565C4] transition-colors">
+                     07 72 35 59 34
                     </a>
-                    <br />
-                    <a href="tel:0148496932" className="hover:text-[#0565C4] transition-colors">
-                      01 48 49 69 32
-                    </a>
+                  
                   </p>
                 </div>
               </div>
