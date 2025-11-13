@@ -2,12 +2,9 @@ import dotenv from 'dotenv';
 import express from 'express';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
 dotenv.config();
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 // Middleware
@@ -23,7 +20,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Fonction pour générer le HTML de l'email
+// Fonction pour générer le HTML de l'email (pour l'entreprise)
 function generateEmailHTML(formData) {
   const getProjetLabel = (value) => {
     const projets = {
@@ -47,8 +44,6 @@ function generateEmailHTML(formData) {
     return toitures[value] || value;
   };
 
- 
-
   return `
   <!DOCTYPE html>
   <html lang="fr">
@@ -59,7 +54,6 @@ function generateEmailHTML(formData) {
       body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
       .container { max-width: 600px; margin: 0 auto; background-color: #f5f5f5; padding: 20px; }
       .header { background-color: #0565C4; color: white; padding: 30px; text-align: center; border-radius: 5px 5px 0 0; }
-      .logo { max-width: 120px; height: auto; margin-bottom: 15px; }
       .content { background-color: white; padding: 30px; border-radius: 0 0 5px 5px; }
       .section { margin-bottom: 25px; border-bottom: 1px solid #e0e0e0; padding-bottom: 20px; }
       .section:last-child { border-bottom: none; }
@@ -67,24 +61,20 @@ function generateEmailHTML(formData) {
       .info-row { display: flex; justify-content: space-between; margin-bottom: 8px; padding: 8px 0; }
       .info-label { font-weight: bold; color: #555; width: 40%; }
       .info-value { color: #333; width: 60%; text-align: right; }
-      .badge { display: inline-block; background-color: #0565C4; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-right: 5px; margin-bottom: 5px; }
       .footer { background-color: #f0f0f0; padding: 20px; text-align: center; font-size: 12px; color: #666; border-radius: 5px; margin-top: 20px; }
-      .footer img { max-width: 150px; height: auto; margin-bottom: 15px; }
       .important { background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 3px; }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <img src="/Logo.png" alt="Logo Tf Couverture" class="logo">
         <h1>🏠 Nouvelle Demande de Devis</h1>
         <p>Tf Couverture - Demande de RDV</p>
       </div>
 
       <div class="content">
         <p>Bonjour,</p>
-        <p>Merci pour votre demande de devis auprès de <strong>Tf Couverture</strong>.
-        Nous vous contacterons prochainement pour confirmer le rendez-vous.</p>
+        <p>Vous avez reçu une nouvelle demande de devis de la part d'un client.</p>
 
         <div class="section">
           <div class="section-title">📋 Informations personnelles</div>
@@ -108,15 +98,10 @@ ${formData.description}
           </p>
         </div>
 
-        <div class="important">
-          <strong>ℹ️ Important :</strong> Vos données sont confidentielles et ne seront jamais partagées.
-        </div>
-
-        <p style="margin-top: 30px;">Cordialement,<br><strong>L'équipe Tf Couverture</strong></p>
+        <p style="margin-top: 30px;">À bientôt,<br><strong>Système TF Couverture</strong></p>
       </div>
 
       <div class="footer">
-        <img src="/Logo.png" alt="Logo Tf Couverture">
         <p>Tf Couverture | Rénovation & Isolation de Toiture</p>
         <p>© ${new Date().getFullYear()} Tf Couverture. Tous droits réservés.</p>
       </div>
@@ -126,7 +111,7 @@ ${formData.description}
   `;
 }
 
-// Fonction pour générer l'email de confirmation
+// Fonction pour générer l'email de confirmation (pour le client)
 function generateConfirmationEmailHTML(formData) {
   return `
   <!DOCTYPE html>
@@ -138,19 +123,15 @@ function generateConfirmationEmailHTML(formData) {
       body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
       .container { max-width: 600px; margin: 0 auto; background-color: #f5f5f5; padding: 20px; }
       .header { background-color: #0565C4; color: white; padding: 30px; text-align: center; border-radius: 5px 5px 0 0; }
-      .logo { max-width: 120px; height: auto; margin-bottom: 15px; }
       .content { background-color: white; padding: 30px; border-radius: 0 0 5px 5px; }
       .footer { background-color: #f0f0f0; padding: 20px; text-align: center; font-size: 12px; color: #666; border-radius: 5px; margin-top: 20px; }
-      .footer img { max-width: 150px; height: auto; margin-bottom: 15px; }
-      .button { display: inline-block; background-color: #0565C4; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; margin-top: 20px; font-weight: bold; }
       .success-message { background-color: #d4edda; border-left: 4px solid #28a745; padding: 12px; margin: 20px 0; border-radius: 3px; color: #155724; }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <img src="/Logo.png" alt="Logo Tf Couverture" class="logo">
-        <h1>✓ Demande Confirmée</h1>
+        <h1>✓ Confirmation de votre demande</h1>
         <p>Tf Couverture</p>
       </div>
 
@@ -161,19 +142,19 @@ function generateConfirmationEmailHTML(formData) {
           <strong>✓</strong> Nous avons bien reçu votre demande de devis.
         </div>
 
-        <p>Un représentant de TF Couverture vous contactera très bientôt pour confirmer votre rendez-vous et discuter de votre projet de ${formData.projet}.</p>
+        <p>Un représentant de TF Couverture vous contactera très bientôt pour confirmer votre rendez-vous et discuter de votre projet.</p>
 
-        <p>En attendant, vous pouvez nous contacter directement :</p>
+        <p style="margin-top: 30px;">En attendant, vous pouvez nous contacter directement :</p>
         <ul>
-          <li><strong>Téléphone :</strong> 01 43 51 87 24</li>
+          <li><strong>Téléphone :</strong> 07 72 35 59 34</li>
           <li><strong>Email :</strong> info@TF-Couverture.com</li>
+          <li><strong>Adresse :</strong> 1-3 rue Maryse Bastié, 93600 Aulnay sous Bois</li>
         </ul>
 
         <p style="margin-top: 30px;">Cordialement,<br><strong>L'équipe Tf Couverture</strong></p>
       </div>
 
       <div class="footer">
-        <img src="/Logo.png" alt="Logo Tf Couverture">
         <p>Tf Couverture | Rénovation & Isolation de Toiture</p>
         <p>© ${new Date().getFullYear()} Tf Couverture. Tous droits réservés.</p>
       </div>
@@ -198,36 +179,21 @@ app.post('/api/send-quote-request', async (req, res) => {
 
     const htmlContent = generateEmailHTML(formData);
     const confirmationHtmlContent = generateConfirmationEmailHTML(formData);
-    const logoPath = path.join(__dirname, '/Logo.png');
 
-    // Email au destinataire (l'email du client)
+    // ✅ Email à l'entreprise (adresse professionnelle)
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: formData.email,
+      to: process.env.EMAIL_USER, // Email de l'entreprise depuis les variables d'env
       subject: `Nouvelle demande de devis - ${formData.nom} ${formData.prenom}`,
       html: htmlContent,
-      attachments: [
-        {
-          filename: 'Logo.png',
-          path: logoPath,
-          cid: 'logo',
-        }
-      ],
     });
 
-    // Email de confirmation au client
+    // ✅ Email de confirmation au client
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: formData.email,
+      to: formData.email, // Email du client
       subject: 'Confirmation de votre demande de devis - Tf Couverture',
       html: confirmationHtmlContent,
-      attachments: [
-        {
-          filename: 'Logo.png',
-          path: logoPath,
-          cid: 'logo',
-        }
-      ],
     });
 
     res.json({ 
