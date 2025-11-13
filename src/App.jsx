@@ -8,6 +8,7 @@ import Project from './pages/Project';
 import ContactMapSection from './pages/Conatct';
 import AboutCompanySection from './pages/Entreprise';
 import QuoteRequestForm from './pages/Devis';
+import WhatsAppButton from './components/WhatsApp';
 
 
 
@@ -46,7 +47,9 @@ function App() {
        
       </Routes>
 
+
       <Footer />
+      <WhatsAppButton/>
 
     
     </div>

@@ -78,7 +78,7 @@ export default function Navbar() {
            <a to="/contact" className="hidden lg:block items-center text-[#0565C4] hover:text-[#045fba]  px-6 py-2 rounded-md font-medium transition-colors">
           
           <Phone size={16} className="inline-block mr-2" />
-          <span>06.52.69.32.93</span> 
+          <span>07 72 35 59 34</span> 
         </a>
         <Link to="/devis" className="hidden lg:block bg-[#0565C4] hover:bg-[#045fba] text-white px-6 py-2 rounded-md font-medium transition-colors">
           Demander un devis

@@ -47,16 +47,7 @@ function generateEmailHTML(formData) {
     return toitures[value] || value;
   };
 
-  const getConnaissanceLabel = (value) => {
-    const sources = {
-      google: "Google (moteur de recherche)",
-      "pages-jaunes": "Pages Jaunes",
-      annuaire: "Annuaire",
-      "bouche-a-oreille": "Bouche-à-oreille",
-      autre: "Autre",
-    };
-    return sources[value] || value;
-  };
+ 
 
   return `
   <!DOCTYPE html>

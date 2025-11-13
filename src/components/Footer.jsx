@@ -21,7 +21,7 @@ export default function Footer() {
             <h3 className="text-white font-bold text-lg mb-4">Contact</h3>
             <div className="space-y-3 text-white/90">
               <p className="hover:text-white transition-colors">
-                <a href="tel:0143518724">01 43 51 87 24</a>
+                <a href="tel:0143518724">07 72 35 59 34</a>
               </p>
               <p className="hover:text-white transition-colors">
                 <a href="mailto:info@TF-Couverture.com">info@TF-Couverture.com</a>
