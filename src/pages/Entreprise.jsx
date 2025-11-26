@@ -176,10 +176,10 @@ Notre savoir-faire : l'isolation des toitures, notamment par procédé SARKING e
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                   <a 
-                    href="mailto:info@Tf-couverture.com" 
+                    href="mailto:contact@Tf-couverture.com" 
                     className="text-gray-600 hover:text-[#0565C4] transition-colors"
                   >
-                    info@Tf-couverture.com
+                    contact@Tf-couverture.com
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Réponse sous 2h</p>
                 </div>
@@ -190,31 +190,11 @@ Notre savoir-faire : l'isolation des toitures, notamment par procédé SARKING e
             <div>
               <h3 className="font-semibold text-gray-900 mb-4">Retrouvez-nous sur les réseaux</h3>
               <div className="flex gap-3">
-                {/* Twitter/X */}
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-gray-100 hover:bg-[#0565C4] rounded-full flex items-center justify-center transition-colors group"
-                  aria-label="Twitter"
-                >
-                  <svg className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                  </svg>
-                </a>
-
-                {/* Facebook */}
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-gray-100 hover:bg-[#0565C4] rounded-full flex items-center justify-center transition-colors group"
-                  aria-label="Facebook"
-                >
-                  <svg className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                  </svg>
-                </a>
+           
 
                 {/* Instagram */}
                 <a
-                  href="#"
+                  href="https://www.instagram.com/tfcouverture"
                   className="w-12 h-12 bg-gray-100 hover:bg-[#0565C4] rounded-full flex items-center justify-center transition-colors group"
                   aria-label="Instagram"
                 >
@@ -225,7 +205,7 @@ Notre savoir-faire : l'isolation des toitures, notamment par procédé SARKING e
 
                 {/* LinkedIn */}
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/thi%C3%A9coro-fane-tf-couverture?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                   className="w-12 h-12 bg-gray-100 hover:bg-[#0565C4] rounded-full flex items-center justify-center transition-colors group"
                   aria-label="LinkedIn"
                 >

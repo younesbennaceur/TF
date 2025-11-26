@@ -57,13 +57,10 @@ export default function QuoteRequestForm() {
         setFormData({
           nom: '',
           prenom: '',
-          adresse: '',
           ville: '',
-          codePostal: '',
           telephone: '',
           email: '',
           projet: '',
-          typeToiture: '',
           
           description: '',
          
@@ -153,15 +150,7 @@ export default function QuoteRequestForm() {
             {/* Address */}
             <div>
               <label className="block text-gray-700 font-medium mb-2">Adresse</label>
-              <input
-                required
-                type="text"
-                name="adresse"
-                placeholder="Adresse"
-                value={formData.adresse}
-                onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none mb-3"
-              />
+           
               <input
                 required
                 type="text"
@@ -171,15 +160,7 @@ export default function QuoteRequestForm() {
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none mb-3"
               />
-              <input
-                required
-                type="text"
-                name="codePostal"
-                placeholder="Code Postal"
-                value={formData.codePostal}
-                onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none"
-              />
+           
             </div>
 
             {/* Téléphone */}
@@ -229,24 +210,7 @@ export default function QuoteRequestForm() {
               </select>
             </div>
 
-            {/* Type de toiture */}
-            <div>
-              <label className="block text-gray-700 font-medium mb-2">Type de toiture</label>
-              <select
-                required
-                name="typeToiture"
-                value={formData.typeToiture}
-                onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0565C4] focus:border-transparent outline-none"
-              >
-                <option value="">Choisissez votre type de toiture</option>
-                <option value="tuile">Tuile</option>
-                <option value="ardoise">Ardoise</option>
-                <option value="zinc">Zinc</option>
-                <option value="bac-acier">Bac acier</option>
-                <option value="shingle">Shingle</option>
-              </select>
-            </div>
+       
 
  
           

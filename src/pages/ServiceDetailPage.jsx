@@ -165,7 +165,7 @@ export default function ServiceDetailPage() {
   }
 
   return (
-    <section className="w-full pt-24 pb-16 bg-white">
+    <section className="w-full pt-32 pb-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
         {/* Hero Image */}
         <div className="mb-12 rounded-lg overflow-hidden h-96">

@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Music, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Music, Youtube, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -24,7 +24,7 @@ export default function Footer() {
                 <a href="tel:0143518724">07 72 35 59 34</a>
               </p>
               <p className="hover:text-white transition-colors">
-                <a href="mailto:info@TF-Couverture.com">info@TF-Couverture.com</a>
+                <a href="mailto:contact@TF-Couverture.com">Conatct@TF-Couverture.com</a>
               </p>
               <div className="space-y-1 text-sm">
                 <p>1-3 rue Maryse Bastié 93600</p>
@@ -37,10 +37,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Informations</h3>
             <div className="space-y-3 text-white/90 text-sm">
-              <p>SIRET : 531 014 843 00019</p>
+              <p>SIRET : 831 830 591 000 28</p>
               <div>
                 <p className="font-semibold">Garantie décennale :</p>
-                <p>AVIVA ASSURANCES</p>
+                <p>SMABTP</p>
               </div>
             </div>
           </div>
@@ -50,16 +50,16 @@ export default function Footer() {
             <h3 className="text-white font-bold text-lg mb-4">Suivez-nous</h3>
             <div className="space-y-3">
               <a
-                href="https://facebook.com"
+                href="https://www.linkedin.com/in/thi%C3%A9coro-fane-tf-couverture?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-white/90 hover:text-white transition-colors"
               >
-                <Facebook size={20} />
-                <span>Facebook</span>
+                <Linkedin size={20} />
+                <span>Linkedin</span>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/tfcouverture"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-white/90 hover:text-white transition-colors"
@@ -67,24 +67,8 @@ export default function Footer() {
                 <Instagram size={20} />
                 <span>Instagram</span>
               </a>
-              <a
-                href="https://tiktok.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/90 hover:text-white transition-colors"
-              >
-                <Music size={20} />
-                <span>TikTok</span>
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/90 hover:text-white transition-colors"
-              >
-                <Youtube size={20} />
-                <span>YouTube</span>
-              </a>
+             
+              
             </div>
           </div>
         </div>

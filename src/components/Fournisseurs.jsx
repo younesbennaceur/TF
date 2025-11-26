@@ -5,33 +5,28 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const suppliersData = [
   {
     id: 1,
-    name: 'UNILIN',
+    name: 'lariviere ',
     logo: '/f1.png'
   },
   {
     id: 2,
-    name: 'ISONAT',
-    logo: '/f2.png'
+    name: 'Point.P',
+    logo: '/f2.jpg'
   },
   {
     id: 3,
-    name: 'ISOVER',
+    name: 'La plateforme du batiment',
     logo: '/f3.png'
   },
   {
     id: 4,
-    name: 'PLACO',
+    name: 'Leroy merlin',
     logo: '/f4.png'
   },
   {
     id: 5,
     name: 'VELUX',
-    logo: '/f1.png'
-  },
-  {
-    id: 6,
-    name: 'ROCKWOOL',
-    logo: '/f2.png'
+    logo: '/f5.svg'
   }
 ];
 

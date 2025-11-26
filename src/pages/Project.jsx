@@ -11,10 +11,9 @@ const projectsData = [
     description: 'Rénovation complète d\'une toiture en zinc avec isolation thermique performante.',
     fullDescription: 'Ce projet a consisté en la rénovation complète d\'une toiture en zinc combinée avec une isolation thermique de pointe. Les travaux ont été réalisés en respectant les délais et budget prévu.',
     location: 'Paris, Île-de-France',
-    date: '2024',
+  
     socialLinks: {
-      instagram: 'https://instagram.com',
-      facebook: 'https://facebook.com'
+      instagram: 'https://www.instagram.com/tfcouverture'
     }
   },
   {
@@ -23,11 +22,10 @@ const projectsData = [
      image: '/2.jpg',
     description: 'Installation de nouvelles tuiles mécaniques avec structure de charpente renforcée.',
     fullDescription: 'Installation de tuiles mécaniques haute gamme avec renforcement de la structure de charpente. Finitions impeccables et respect des normes de construction.',
-    location: 'Lyon, Rhône-Alpes',
-    date: '2024',
+    location: 'Paris, Île-de-France',
+   
     socialLinks: {
-      instagram: 'https://instagram.com',
-      facebook: 'https://facebook.com'
+      instagram: 'https://www.instagram.com/tfcouverture',
     }
   },
   {
@@ -36,11 +34,10 @@ const projectsData = [
      image: '/5.jpg',
     description: 'Belle réflection de toiture en tuiles plates à Lumigny-Nesles Ormeaux cet été. Isolation de la toiture par procédé sarking combinant fibres de bois et polyuréthane, tuiles...',
     fullDescription: 'Belle réflection de toiture en tuiles plates à Lumigny-Nesles Ormeaux. Isolation de la toiture par procédé sarking combinant fibres de bois et polyuréthane pour un confort optimal.',
-    location: 'Lumigny-Nesles Ormeaux',
-    date: '2024',
+    location: 'Paris, Île-de-France',
+ 
     socialLinks: {
-      instagram: 'https://instagram.com',
-      facebook: 'https://facebook.com'
+      instagram: 'https://www.instagram.com/tfcouverture'
     }
   },
   {
@@ -49,11 +46,10 @@ const projectsData = [
      image: '/p4.jpg',
     description: 'Rénovation d\'une toiture en bac acier avec pose de fenêtre de toit.',
     fullDescription: 'Rénovation d\'une toiture en bac acier avec intégration de fenêtres de toit pour améliorer la lumière naturelle.',
-    location: 'Marseille, Provence',
-    date: '2024',
+   location: 'Paris, Île-de-France',
+   
     socialLinks: {
-      instagram: 'https://instagram.com',
-      facebook: 'https://facebook.com'
+      instagram: 'https://www.instagram.com/tfcouverture'
     }
   },
   {
@@ -62,11 +58,10 @@ const projectsData = [
      image: '/charpant.jpg',
     description: 'Reconstruction complète de charpente et nouvelle couverture.',
     fullDescription: 'Reconstruction complète de la structure de charpente selon les normes actuelles et pose d\'une nouvelle couverture de qualité premium.',
-    location: 'Bordeaux, Aquitaine',
-    date: '2024',
+    location: 'Paris, Île-de-France',
+   
     socialLinks: {
-      instagram: 'https://instagram.com',
-      facebook: 'https://facebook.com'
+      instagram: 'https://www.instagram.com/tfcouverture',
     }
   },
   {
@@ -75,14 +70,13 @@ const projectsData = [
      image: '/demoussage.jpg',
     description: 'Démoussage et nettoyage professionnel de toiture avec traitement hydrofuge.',
     fullDescription: 'Démoussage professionnel suivi d\'un nettoyage complet et traitement hydrofuge pour préserver la toiture.',
-    location: 'Toulouse, Midi-Pyrénées',
-    date: '2024',
+    location: 'Paris, Île-de-France',
+   
     socialLinks: {
-      instagram: 'https://instagram.com',
-      facebook: 'https://facebook.com'
+      instagram: 'https://www.instagram.com/tfcouverture'
     }
   }
-];;
+];
 
 export default function Project() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -121,17 +115,7 @@ export default function Project() {
 
         {/* Social Links */}
         <div className="flex justify-center gap-4 mb-12">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-2 border-2 border-gray-300 rounded-full hover:border-[#0565C4] hover:text-[#0565C4] transition-colors"
-          >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-            </svg>
-            <span className="hidden sm:inline font-semibold">Facebook</span>
-          </a>
+        
           <a
             href="https://instagram.com"
             target="_blank"
@@ -215,19 +199,9 @@ export default function Project() {
 
               {/* Social Links */}
               <div className="flex  gap-4">
+       
           <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-2 border-2 border-gray-300 rounded-full hover:border-[#0565C4] hover:text-[#0565C4] transition-colors"
-          >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-            </svg>
-            <span className="hidden sm:inline font-semibold">Facebook</span>
-          </a>
-          <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/tfcouverture"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-2 border-2 border-gray-300 rounded-full hover:border-[#0565C4] hover:text-[#0565C4] transition-colors"
