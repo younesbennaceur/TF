@@ -147,7 +147,7 @@ function generateConfirmationEmailHTML(formData) {
         <p style="margin-top: 30px;">En attendant, vous pouvez nous contacter directement :</p>
         <ul>
           <li><strong>Téléphone :</strong> 07 72 35 59 34</li>
-          <li><strong>Email :</strong> info@TF-Couverture.com</li>
+          <li><strong>Email :</strong> info@tfouverture.com</li>
           <li><strong>Adresse :</strong> 1-3 rue Maryse Bastié, 93600 Aulnay sous Bois</li>
         </ul>
 

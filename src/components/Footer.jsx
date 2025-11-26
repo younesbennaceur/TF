@@ -1,6 +1,25 @@
 import { Facebook, Instagram, Music, Youtube, Linkedin } from 'lucide-react';
 
 export default function Footer() {
+ const suppliersData = [
+  {
+    id: 1,
+    name: 'lariviere ',
+    logo: '/l1.jpg'
+  },
+  {
+    id: 2,
+    name: 'Point.P',
+    logo: '/l2.png'
+  },
+  {
+    id: 3,
+    name: 'La plateforme du batiment',
+    logo: '/l3.png'
+  }
+];
+ 
+ 
   return (
     <footer className="w-full bg-[#0565C4]">
       {/* Main Footer Content */}
@@ -24,7 +43,7 @@ export default function Footer() {
                 <a href="tel:0143518724">07 72 35 59 34</a>
               </p>
               <p className="hover:text-white transition-colors">
-                <a href="mailto:contact@TF-Couverture.com">Conatct@TF-Couverture.com</a>
+                <a href="mailto:contact@tfcouverture.com">Conatct@tfCouverture.com</a>
               </p>
               <div className="space-y-1 text-sm">
                 <p>1-3 rue Maryse Bastié 93600</p>
@@ -75,6 +94,29 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-white/20 my-8"></div>
+         {/* Suppliers Grid */}
+        <div className=" flex justify-center items-center gap-8 mb-12">
+          
+         
+              <img
+                src="/l1.jpg"
+                className="w-24 h-24 opacity-100  "
+              />
+               <img
+                src="/l2.png"
+                className="w-24 h-8 opacity-100  "
+              />
+               <img
+                src="/l3.png"
+                className="w-24 h-24y
+                 opacity-100  "
+              />
+           
+       
+        </div>
+
+
+         <div className="border-t border-white/20 my-8"></div>
 
         {/* Copyright */}
         <div className="text-center text-white/80 text-sm space-y-2">

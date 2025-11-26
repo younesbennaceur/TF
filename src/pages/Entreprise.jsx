@@ -176,10 +176,10 @@ Notre savoir-faire : l'isolation des toitures, notamment par procédé SARKING e
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                   <a 
-                    href="mailto:contact@Tf-couverture.com" 
+                    href="mailto:contact@tfcouverture.com" 
                     className="text-gray-600 hover:text-[#0565C4] transition-colors"
                   >
-                    contact@Tf-couverture.com
+                    contact@tfcouverture.com
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Réponse sous 2h</p>
                 </div>
