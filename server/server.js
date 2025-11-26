@@ -13,12 +13,14 @@ app.use(express.json());
 
 // Configuration Nodemailer
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD,
-  },
-});
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: "contact@tfcouverture.com",
+      pass: "erhf eewa whmv uxoz",
+    },
+  });
 
 // Fonction pour générer le HTML de l'email (pour l'entreprise)
 function generateEmailHTML(formData) {
@@ -147,7 +149,7 @@ function generateConfirmationEmailHTML(formData) {
         <p style="margin-top: 30px;">En attendant, vous pouvez nous contacter directement :</p>
         <ul>
           <li><strong>Téléphone :</strong> 07 72 35 59 34</li>
-          <li><strong>Email :</strong> info@tfouverture.com</li>
+          <li><strong>Email :</strong> contact@tfouverture.com</li>
           <li><strong>Adresse :</strong> 1-3 rue Maryse Bastié, 93600 Aulnay sous Bois</li>
         </ul>
 
