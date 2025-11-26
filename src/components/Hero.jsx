@@ -18,6 +18,7 @@ export default function HeroSection() {
 
       {/* White Gradient Overlay (bottom to top) */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent  to-white opacity-100"></div>
+      
 
       {/* Content */}
       <div className="relative z-10 w-full h-full flex items-center pl-8 lg:pl-16 max-w-7xl">
