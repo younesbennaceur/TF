@@ -99,7 +99,7 @@ export default function Footer() {
           
          
               <img
-                src="/l1.jpg"
+                src="/l1.png"
                 className="w-24 h-24 opacity-100  "
               />
                <img
